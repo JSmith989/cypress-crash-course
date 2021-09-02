@@ -14,6 +14,7 @@ describe('Accomplishments Dashboard', () => {
   });
 
   it("should display inappropriate content error when it includes 'giraffe with mock'", () => {
+    // instead of fixture you can add a handler that is going to reply /// with this object
     cy.intercept('POST', 'http://localhost:4000', (req) => {
       req.reply((res) => {
         res.send({
